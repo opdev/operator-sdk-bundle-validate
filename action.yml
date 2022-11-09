@@ -18,4 +18,4 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.bundle-path }}
-      ${{ inputs.generate-bundle }}
+    - ${{ inputs.generate-bundle }}
