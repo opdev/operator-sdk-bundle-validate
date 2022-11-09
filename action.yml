@@ -17,5 +17,5 @@ runs:
   using: 'docker'
   image: 'quay.io/operator-framework/operator-sdk:latest'
   args:
-    - ${{ inputs.bundle-to-validate }}
+    - ${{ inputs.bundle-path }}
       ${{ inputs.generate-bundle }}
