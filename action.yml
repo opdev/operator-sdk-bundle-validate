@@ -15,7 +15,7 @@ outputs:
     description: 'Output of operator sdk bundle validate'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'quay.io/operator-framework/operator-sdk:latest'
   args:
     - ${{ inputs.bundle-to-validate }}
       ${{ inputs.generate-bundle }}
