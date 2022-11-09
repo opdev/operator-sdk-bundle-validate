@@ -1,0 +1,21 @@
+# action.yml
+name: 'Operator SDK bundle validate'
+description: 'Greet someone and record the time'
+inputs:
+  bundle-path:  # relative path of bundle to validate
+    description: 'Relative path of bundle to validate'
+    required: false
+    default: './bundle'
+  generate-bundle: # whether or not to regenerate bundle
+    description: 'Toggle bundle generation'
+    required: false
+    default: false
+outputs:
+  bundle-validate-output: # output of operator sdk bundle validate
+    description: 'Output of operator sdk bundle validate'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.bundle-to-validate }}
+      ${{ inputs.generate-bundle }}

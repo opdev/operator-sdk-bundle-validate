@@ -1,14 +1,25 @@
-# repository-template
-new repository description
+# operator sdk bundle validate action
 
-## Usage
-usage description
+This action runs operator-sdk bundle validate on a relative bundle path
 
-## Installation
-installation steps
+## Inputs
 
-## How to contribute
-steps
+## `bundle-path`
 
-## License
-license description and link
+**Optional** The relative path of the bundle to validate. Default `"./bundle"`.
+
+## 'generate-bundle'
+
+**Optional** Whether or not to re-generate the bundle before running bundle validate. Default `false`
+
+## Outputs
+
+## `bundle-validate-output`
+
+The output of the bundle validate command
+
+## Example usage
+
+uses: opdev/operator-sdk-bundle-validate@v1
+with:
+  bundle-path: './bundle'
